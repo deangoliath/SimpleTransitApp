@@ -1,0 +1,165 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.wmata"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+11-->/home/nckclrk/wmata-android/app/src/main/AndroidManifest.xml:3:5-78
+11-->/home/nckclrk/wmata-android/app/src/main/AndroidManifest.xml:3:22-76
+12    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+12-->/home/nckclrk/wmata-android/app/src/main/AndroidManifest.xml:4:5-80
+12-->/home/nckclrk/wmata-android/app/src/main/AndroidManifest.xml:4:22-78
+13    <uses-permission android:name="android.permission.INTERNET" />
+13-->/home/nckclrk/wmata-android/app/src/main/AndroidManifest.xml:5:5-66
+13-->/home/nckclrk/wmata-android/app/src/main/AndroidManifest.xml:5:22-64
+14
+15    <permission
+15-->[androidx.core:core:1.9.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/57bbc3dcaa5b7980ae3be1076c8525b8/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+16        android:name="com.example.wmata.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+16-->[androidx.core:core:1.9.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/57bbc3dcaa5b7980ae3be1076c8525b8/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+17        android:protectionLevel="signature" />
+17-->[androidx.core:core:1.9.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/57bbc3dcaa5b7980ae3be1076c8525b8/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+18
+19    <uses-permission android:name="com.example.wmata.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+19-->[androidx.core:core:1.9.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/57bbc3dcaa5b7980ae3be1076c8525b8/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+19-->[androidx.core:core:1.9.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/57bbc3dcaa5b7980ae3be1076c8525b8/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+20
+21    <supports-screens
+21-->[org.osmdroid:osmdroid-android:6.1.20] /home/nckclrk/.gradle/caches/8.11.1/transforms/6484448c8ea8e694df7167d10381f9ee/transformed/jetified-osmdroid-android-6.1.20/AndroidManifest.xml:9:5-12:40
+22        android:anyDensity="true"
+22-->[org.osmdroid:osmdroid-android:6.1.20] /home/nckclrk/.gradle/caches/8.11.1/transforms/6484448c8ea8e694df7167d10381f9ee/transformed/jetified-osmdroid-android-6.1.20/AndroidManifest.xml:10:9-34
+23        android:largeScreens="true"
+23-->[org.osmdroid:osmdroid-android:6.1.20] /home/nckclrk/.gradle/caches/8.11.1/transforms/6484448c8ea8e694df7167d10381f9ee/transformed/jetified-osmdroid-android-6.1.20/AndroidManifest.xml:11:9-36
+24        android:normalScreens="true" />
+24-->[org.osmdroid:osmdroid-android:6.1.20] /home/nckclrk/.gradle/caches/8.11.1/transforms/6484448c8ea8e694df7167d10381f9ee/transformed/jetified-osmdroid-android-6.1.20/AndroidManifest.xml:12:9-37
+25
+26    <uses-feature
+26-->[org.osmdroid:osmdroid-android:6.1.20] /home/nckclrk/.gradle/caches/8.11.1/transforms/6484448c8ea8e694df7167d10381f9ee/transformed/jetified-osmdroid-android-6.1.20/AndroidManifest.xml:14:5-16:36
+27        android:name="android.hardware.location.network"
+27-->[org.osmdroid:osmdroid-android:6.1.20] /home/nckclrk/.gradle/caches/8.11.1/transforms/6484448c8ea8e694df7167d10381f9ee/transformed/jetified-osmdroid-android-6.1.20/AndroidManifest.xml:15:9-57
+28        android:required="false" />
+28-->[org.osmdroid:osmdroid-android:6.1.20] /home/nckclrk/.gradle/caches/8.11.1/transforms/6484448c8ea8e694df7167d10381f9ee/transformed/jetified-osmdroid-android-6.1.20/AndroidManifest.xml:16:9-33
+29    <uses-feature
+29-->[org.osmdroid:osmdroid-android:6.1.20] /home/nckclrk/.gradle/caches/8.11.1/transforms/6484448c8ea8e694df7167d10381f9ee/transformed/jetified-osmdroid-android-6.1.20/AndroidManifest.xml:17:5-19:36
+30        android:name="android.hardware.location.gps"
+30-->[org.osmdroid:osmdroid-android:6.1.20] /home/nckclrk/.gradle/caches/8.11.1/transforms/6484448c8ea8e694df7167d10381f9ee/transformed/jetified-osmdroid-android-6.1.20/AndroidManifest.xml:18:9-53
+31        android:required="false" />
+31-->[org.osmdroid:osmdroid-android:6.1.20] /home/nckclrk/.gradle/caches/8.11.1/transforms/6484448c8ea8e694df7167d10381f9ee/transformed/jetified-osmdroid-android-6.1.20/AndroidManifest.xml:19:9-33
+32    <uses-feature
+32-->[org.osmdroid:osmdroid-android:6.1.20] /home/nckclrk/.gradle/caches/8.11.1/transforms/6484448c8ea8e694df7167d10381f9ee/transformed/jetified-osmdroid-android-6.1.20/AndroidManifest.xml:20:5-22:36
+33        android:name="android.hardware.telephony"
+33-->[org.osmdroid:osmdroid-android:6.1.20] /home/nckclrk/.gradle/caches/8.11.1/transforms/6484448c8ea8e694df7167d10381f9ee/transformed/jetified-osmdroid-android-6.1.20/AndroidManifest.xml:21:9-50
+34        android:required="false" />
+34-->[org.osmdroid:osmdroid-android:6.1.20] /home/nckclrk/.gradle/caches/8.11.1/transforms/6484448c8ea8e694df7167d10381f9ee/transformed/jetified-osmdroid-android-6.1.20/AndroidManifest.xml:22:9-33
+35    <uses-feature
+35-->[org.osmdroid:osmdroid-android:6.1.20] /home/nckclrk/.gradle/caches/8.11.1/transforms/6484448c8ea8e694df7167d10381f9ee/transformed/jetified-osmdroid-android-6.1.20/AndroidManifest.xml:23:5-25:36
+36        android:name="android.hardware.wifi"
+36-->[org.osmdroid:osmdroid-android:6.1.20] /home/nckclrk/.gradle/caches/8.11.1/transforms/6484448c8ea8e694df7167d10381f9ee/transformed/jetified-osmdroid-android-6.1.20/AndroidManifest.xml:24:9-45
+37        android:required="false" />
+37-->[org.osmdroid:osmdroid-android:6.1.20] /home/nckclrk/.gradle/caches/8.11.1/transforms/6484448c8ea8e694df7167d10381f9ee/transformed/jetified-osmdroid-android-6.1.20/AndroidManifest.xml:25:9-33
+38
+39    <application
+39-->/home/nckclrk/wmata-android/app/src/main/AndroidManifest.xml:7:5-22:19
+40        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+40-->[androidx.core:core:1.9.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/57bbc3dcaa5b7980ae3be1076c8525b8/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+41        android:debuggable="true"
+42        android:extractNativeLibs="true"
+43        android:icon="@mipmap/ic_launcher"
+43-->/home/nckclrk/wmata-android/app/src/main/AndroidManifest.xml:10:9-43
+44        android:label="WMATA Simple"
+44-->/home/nckclrk/wmata-android/app/src/main/AndroidManifest.xml:8:9-37
+45        android:roundIcon="@mipmap/ic_launcher"
+45-->/home/nckclrk/wmata-android/app/src/main/AndroidManifest.xml:11:9-48
+46        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+46-->/home/nckclrk/wmata-android/app/src/main/AndroidManifest.xml:9:9-65
+47        <activity
+47-->/home/nckclrk/wmata-android/app/src/main/AndroidManifest.xml:15:9-21:20
+48            android:name="com.example.wmata.MainActivity"
+48-->/home/nckclrk/wmata-android/app/src/main/AndroidManifest.xml:15:19-47
+49            android:exported="true" >
+49-->/home/nckclrk/wmata-android/app/src/main/AndroidManifest.xml:16:13-36
+50            <intent-filter>
+50-->/home/nckclrk/wmata-android/app/src/main/AndroidManifest.xml:17:13-20:29
+51                <action android:name="android.intent.action.MAIN" />
+51-->/home/nckclrk/wmata-android/app/src/main/AndroidManifest.xml:18:17-68
+51-->/home/nckclrk/wmata-android/app/src/main/AndroidManifest.xml:18:25-66
+52
+53                <category android:name="android.intent.category.LAUNCHER" />
+53-->/home/nckclrk/wmata-android/app/src/main/AndroidManifest.xml:19:17-76
+53-->/home/nckclrk/wmata-android/app/src/main/AndroidManifest.xml:19:27-74
+54            </intent-filter>
+55        </activity>
+56
+57        <provider
+57-->[androidx.emoji2:emoji2:1.2.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/5c64a75dd90c4c963b18837a00cd115a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+58            android:name="androidx.startup.InitializationProvider"
+58-->[androidx.emoji2:emoji2:1.2.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/5c64a75dd90c4c963b18837a00cd115a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+59            android:authorities="com.example.wmata.androidx-startup"
+59-->[androidx.emoji2:emoji2:1.2.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/5c64a75dd90c4c963b18837a00cd115a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+60            android:exported="false" >
+60-->[androidx.emoji2:emoji2:1.2.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/5c64a75dd90c4c963b18837a00cd115a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+61            <meta-data
+61-->[androidx.emoji2:emoji2:1.2.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/5c64a75dd90c4c963b18837a00cd115a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+62                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+62-->[androidx.emoji2:emoji2:1.2.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/5c64a75dd90c4c963b18837a00cd115a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+63                android:value="androidx.startup" />
+63-->[androidx.emoji2:emoji2:1.2.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/5c64a75dd90c4c963b18837a00cd115a/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+64            <meta-data
+64-->[androidx.lifecycle:lifecycle-process:2.6.1] /home/nckclrk/.gradle/caches/8.11.1/transforms/f969703abd1674b9d3b36ad84237a867/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
+65                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+65-->[androidx.lifecycle:lifecycle-process:2.6.1] /home/nckclrk/.gradle/caches/8.11.1/transforms/f969703abd1674b9d3b36ad84237a867/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
+66                android:value="androidx.startup" />
+66-->[androidx.lifecycle:lifecycle-process:2.6.1] /home/nckclrk/.gradle/caches/8.11.1/transforms/f969703abd1674b9d3b36ad84237a867/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
+67            <meta-data
+67-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/cafbdd90d51a86bf01718c496bb2adfd/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+68                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+68-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/cafbdd90d51a86bf01718c496bb2adfd/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+69                android:value="androidx.startup" />
+69-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/cafbdd90d51a86bf01718c496bb2adfd/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+70        </provider>
+71
+72        <receiver
+72-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/cafbdd90d51a86bf01718c496bb2adfd/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+73            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+73-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/cafbdd90d51a86bf01718c496bb2adfd/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+74            android:directBootAware="false"
+74-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/cafbdd90d51a86bf01718c496bb2adfd/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+75            android:enabled="true"
+75-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/cafbdd90d51a86bf01718c496bb2adfd/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+76            android:exported="true"
+76-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/cafbdd90d51a86bf01718c496bb2adfd/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+77            android:permission="android.permission.DUMP" >
+77-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/cafbdd90d51a86bf01718c496bb2adfd/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+78            <intent-filter>
+78-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/cafbdd90d51a86bf01718c496bb2adfd/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+79                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+79-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/cafbdd90d51a86bf01718c496bb2adfd/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+79-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/cafbdd90d51a86bf01718c496bb2adfd/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+80            </intent-filter>
+81            <intent-filter>
+81-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/cafbdd90d51a86bf01718c496bb2adfd/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+82                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+82-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/cafbdd90d51a86bf01718c496bb2adfd/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+82-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/cafbdd90d51a86bf01718c496bb2adfd/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+83            </intent-filter>
+84            <intent-filter>
+84-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/cafbdd90d51a86bf01718c496bb2adfd/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+85                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+85-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/cafbdd90d51a86bf01718c496bb2adfd/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+85-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/cafbdd90d51a86bf01718c496bb2adfd/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+86            </intent-filter>
+87            <intent-filter>
+87-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/cafbdd90d51a86bf01718c496bb2adfd/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+88                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+88-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/cafbdd90d51a86bf01718c496bb2adfd/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+88-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/nckclrk/.gradle/caches/8.11.1/transforms/cafbdd90d51a86bf01718c496bb2adfd/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+89            </intent-filter>
+90        </receiver>
+91    </application>
+92
+93</manifest>

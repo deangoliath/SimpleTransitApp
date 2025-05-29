@@ -1,0 +1,57 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+
+
+
+android {
+    namespace 'com.example.wmata'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.wmata"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    compileOptions {
+        // Use Java 17 for both source and target
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        // Make Kotlin compile to the same JVM version
+        jvmTarget = "17"
+    }
+
+
+    buildTypes {
+        debug { }
+        release {
+            minifyEnabled false
+        }
+    }
+}
+
+dependencies {
+  implementation "org.jetbrains.kotlin:kotlin-stdlib:1.8.21"
+  implementation "androidx.appcompat:appcompat:1.6.1"
+  implementation "androidx.core:core-ktx:1.9.0"
+  implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.1"
+
+  implementation "org.osmdroid:osmdroid-android:6.1.20"
+  implementation 'com.github.MKergall:osmbonuspack:6.9.0'
+
+  implementation "com.squareup.retrofit2:retrofit:2.9.0"
+  implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
+  implementation "com.squareup.moshi:moshi-kotlin:1.15.0"
+  kapt           "com.squareup.moshi:moshi-kotlin-codegen:1.15.0"
+
+  implementation "com.squareup.okhttp3:logging-interceptor:4.11.0"
+}

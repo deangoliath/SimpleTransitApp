@@ -1,0 +1,23 @@
+// settings.gradle
+
+pluginManagement {
+  repositories {
+    gradlePluginPortal()         // for Kotlin Gradle plugin
+    google()                     // for com.android.tools.build:gradle
+    mavenCentral()
+  }
+}
+
+dependencyResolutionManagement {
+  // fail if any repo is declared in project build.gradle
+  repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+  repositories {
+    google()
+    mavenCentral()
+    maven { url "https://jitpack.io" } 
+  }
+}
+
+rootProject.name = 'wmata-android'
+include ':app'
+

@@ -1,0 +1,4 @@
+cd ~/wmata-android/app
+cat > settings.gradle <<EOF
+rootProject.name = 'wmata-android-app'
+EOF
