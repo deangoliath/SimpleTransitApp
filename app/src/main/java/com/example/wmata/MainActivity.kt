@@ -2,6 +2,8 @@ package com.example.wmata
 
 import android.graphics.Bitmap
 import android.graphics.Canvas
+import android.graphics.Color
+
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
 import android.os.Bundle
@@ -53,39 +55,48 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    // Create clusterer and add to overlays
-    stopClusterer = RadiusMarkerClusterer(this).apply {
-      setRadius(100)
-      val drawable = ContextCompat.getDrawable(
-        this@MainActivity,
-        R.drawable.marker_cluster
-      )!!
-      setIcon(drawableToBitmap(drawable))
-      textPaint.textSize = 24f
-      map.overlays.add(this)
-    }
 
-    // Debounced reload on pan/zoom
-    map.addMapListener(object : MapListener {
-      override fun onScroll(ev: ScrollEvent?) = scheduleCluster()
-      override fun onZoom(ev: ZoomEvent?)   = scheduleCluster()
-    })
+       // Create clusterer and add to overlays
+       val iconSize = 96
+       val bitmap = Bitmap.createBitmap(iconSize, iconSize, Bitmap.Config.ARGB_8888)
+       val canvas = Canvas(bitmap)
+       val paint = android.graphics.Paint().apply {
+         color = android.graphics.Color.rgb(230, 159, 0)
+         isAntiAlias = true
+       }
+       canvas.drawCircle(iconSize / 2f, iconSize / 2f, iconSize / 2.2f, paint)
 
-    // Initial load
-    map.post {
-    loadAndClusterStops()
-    }
-  }
+       stopClusterer = RadiusMarkerClusterer(this).apply {
+         setRadius(100)
+         setIcon(bitmap)
+         textPaint.textSize = 24f
+         textPaint.color = android.graphics.Color.WHITE
+         map.overlays.add(this)
+       }
 
-  /** Debounce helper: wait 500ms since last pan/zoom before reloading */
-  private fun scheduleCluster(): Boolean {
-    clusterJob?.cancel()
-    clusterJob = lifecycleScope.launch {
-      delay(500)
+      
+
+      // Debounced reload on pan/zoom
+      map.addMapListener(object : MapListener {
+        override fun onScroll(ev: ScrollEvent?) = scheduleCluster()
+        override fun onZoom(ev: ZoomEvent?)   = scheduleCluster()
+      })
+
+      // Initial load
+      map.post {
       loadAndClusterStops()
+     }
+   }
+
+    /** Debounce helper: wait 500ms since last pan/zoom before reloading */
+    private fun scheduleCluster(): Boolean {
+      clusterJob?.cancel()
+      clusterJob = lifecycleScope.launch {
+        delay(500)
+        loadAndClusterStops()
+      }
+      return true
     }
-    return true
-  }
 
   /** Core: fetch nearby stops, build & cluster markers */
   private fun loadAndClusterStops() {
@@ -119,10 +130,10 @@ class MainActivity : AppCompatActivity() {
             setOnMarkerClickListener { marker, _ ->
               lifecycleScope.launch {
                 try {
-                  val arrivals = WmataClient.service
+                   val arrivals = WmataClient.service
                     .getBusPredictions(apiKey, marker.snippet!!)
                     .predictions.take(2)
-                  marker.snippet = arrivals.joinToString("\n") {
+                   marker.snippet = arrivals.joinToString("\n") {
                     "Bus ${it.routeId} ${it.directionText}: ${it.minutes} min"
                   }
                   marker.showInfoWindow()
@@ -140,9 +151,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         // 4) redraw
+        stopClusterer.invalidate() //This forces the clusterer to actually cluster and show now
         map.invalidate()
 
-      } catch (e: Exception) {
+      } 
+      catch (e: Exception) {
         Log.e("WMATA-CLUSTER", "error loading stops", e)
         Toast.makeText(
           this@MainActivity,
