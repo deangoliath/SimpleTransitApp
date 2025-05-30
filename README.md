@@ -38,7 +38,7 @@ This app does not collect or transmit any personal data. It does not use your lo
 
 | Clusters on Launch | Real-time Arrivals |
 |--------------------|--------------------|
-| ![Clusters](screenshot-clusters.png) | ![Arrivals](screenshot-arrival-popup.png) |
+| ![Clusters](screenshots/screenshot-clusters.png) | ![Arrivals](screenshots/screenshot-arrival-popup.png) |
 
 ---
 
